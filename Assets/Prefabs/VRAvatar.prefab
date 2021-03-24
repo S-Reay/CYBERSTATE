@@ -443,7 +443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Type: 2
   m_Anchor: {fileID: 8149935422628329798}
-  m_AnchorAttachments: []
+  m_AnchorAttachments:
+  - {fileID: 0}
   m_Tracking:
     MatchActive: 1
     MatchPosition: 1
@@ -762,7 +763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Type: 3
   m_Anchor: {fileID: 8149935422236977492}
-  m_AnchorAttachments: []
+  m_AnchorAttachments:
+  - {fileID: 0}
   m_Tracking:
     MatchActive: 1
     MatchPosition: 1
