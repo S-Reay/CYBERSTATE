@@ -1,17 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour
 {
-    private Camera player;
-
-    private void Start()
-    {
-        player = Camera.main;
-    }
     void Update()
     {
-        transform.LookAt(player.transform);
+        transform.LookAt(Camera.main.transform);
     }
 }

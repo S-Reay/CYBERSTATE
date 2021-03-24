@@ -12,19 +12,15 @@ public class LaserPistol : MonoBehaviour
     public GameObject shotPrefab;
     public GameObject firePoint;
 
-    RaycastHit hit;
-    float range = 1000.0f;
-
-
     void Update()
     {
 
-        if (VRDevice.Device.PrimaryInputDevice.GetButtonDown(VRButton.Trigger))
+        if (VRDevice.Device.GetButtonDown(VRButton.Trigger))                                                        //If the player pulls the trigger
         {
-            if (Time.time > shootRateTimeStamp)
+            if (Time.time > shootRateTimeStamp)                                                                     //If the gun is ready to shoot
             {
-                shootRay();
-                shootRateTimeStamp = Time.time + shootRate;
+                shootRay();                                                                                         //Shoot
+                shootRateTimeStamp = Time.time + shootRate;                                                         //Reset timer
             }
         }
 
@@ -32,13 +28,7 @@ public class LaserPistol : MonoBehaviour
 
     void shootRay()
     {
-        Ray ray = new Ray(firePoint.transform.position, firePoint.transform.forward);
-        if (Physics.Raycast(ray, out hit, range))
-        {
-            GameObject laser = Instantiate(shotPrefab, firePoint.transform.position, firePoint.transform.rotation);
-            laser.GetComponent<ShotBehavior>().setTarget(hit.point, hit.transform.gameObject);
-            GameObject.Destroy(laser, 8f);
-        }
-
+        GameObject laser = Instantiate(shotPrefab, firePoint.transform.position, firePoint.transform.rotation);     //Spawn laser shot
+        Destroy(laser, 8f);                                                                                         //Destory laser shot after 8 seconds
     }
 }

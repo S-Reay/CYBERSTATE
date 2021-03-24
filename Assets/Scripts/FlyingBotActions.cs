@@ -11,8 +11,8 @@ public class FlyingBotActions : MonoBehaviour
 
     public GameObject shotPrefab;
     public GameObject firePoint;
-    public GameObject targerPoint;
-    public GameObject player;
+    private GameObject targerPoint;
+    private GameObject player;
 
     public bool hasFired = false;
     public bool isExiting = false;

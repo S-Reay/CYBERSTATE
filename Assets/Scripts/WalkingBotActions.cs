@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class WalkingBotActions : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     public Transform destination;
     public float acceptableDistance;
+    public float walkSpeed;
     public bool hasAttacked = false;
     public bool isDead = false;
     public GameObject explosionPrefab;
 
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
     private void Update()
     {
         if (!isDead)
@@ -23,11 +20,16 @@ public class WalkingBotActions : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, destination.position) < acceptableDistance)
                 {
-                    animator.SetBool("isAttacking", true);
+                    animator.SetBool("isExploding", true);
                     hasAttacked = true;
                     StartCoroutine(CountdownToAttack());
                 }
+                else
+                {
+                    transform.position += transform.forward * walkSpeed * Time.deltaTime;
+                }
             }
+
         }
     }
     IEnumerator CountdownToAttack()
