@@ -3,7 +3,32 @@ guid: 3ca759c155c8d6844b14e53845408bba
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapons_Glow
+    second: {fileID: 2100000, guid: e6517e47689fdeb4d80bde111735008a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapons_Grey
+    second: {fileID: 2100000, guid: d92e3b561e225e14cb01ed7e927381d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapons_Red
+    second: {fileID: 2100000, guid: c0e9b45ef442d90439759041926212ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapons_White
+    second: {fileID: 2100000, guid: 382fc1904b08f6a4cbabe9f25e5efd7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 382fc1904b08f6a4cbabe9f25e5efd7e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
