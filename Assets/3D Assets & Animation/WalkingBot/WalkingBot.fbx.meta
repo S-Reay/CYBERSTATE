@@ -3,7 +3,12 @@ guid: bd47f4ceb5f790a43a83bf8d2863561e
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Glow
+    second: {fileID: 2100000, guid: e5c0e36d58f23e94e9da4b805eea474b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
