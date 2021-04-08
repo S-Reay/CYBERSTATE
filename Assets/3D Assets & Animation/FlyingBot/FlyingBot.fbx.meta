@@ -3,7 +3,27 @@ guid: 9ffb08c01af2a9747a58c97c7e50ecd1
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Base
+    second: {fileID: 2100000, guid: 46afaceb8402c1a46b3e565f61972e4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Glow
+    second: {fileID: 2100000, guid: e5c0e36d58f23e94e9da4b805eea474b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Grey
+    second: {fileID: 2100000, guid: 24e7f7c3ccae7e9439680af6ef479b97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Second
+    second: {fileID: 2100000, guid: 362bd0688b0d9a64c8ddaba740ffdc83, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
