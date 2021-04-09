@@ -1049,6 +1049,7 @@ GameObject:
   - component: {fileID: 1453427246}
   - component: {fileID: 1453427245}
   - component: {fileID: 1453427244}
+  - component: {fileID: 1453427247}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -1129,6 +1130,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453427242}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1453427247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453427242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ee26bde16fa9f4bbf04a949fe1dee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 60
+  beatFull: 0
+  beat8: 0
+  beatCountFull: 0
+  beatCount8: 0
 --- !u!1 &1563184266
 GameObject:
   m_ObjectHideFlags: 0
