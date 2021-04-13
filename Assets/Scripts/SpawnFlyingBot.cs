@@ -8,18 +8,16 @@ public class SpawnFlyingBot : MonoBehaviour
     public GameObject intendedExit;
     public GameObject flyingBotPrefab;
 
-    public float spawnDelay;
+    public int[] spawnRates = new int[92];
+    private int curentBeat = 0;
 
-    void Start()
+    public void Beat()
     {
-        StartCoroutine(timerLoop());
-    }
-
-    IEnumerator timerLoop()
-    {
-        yield return new WaitForSeconds(Random.Range(4f, 8f));
-        Spawn();
-        StartCoroutine(timerLoop());
+        curentBeat++;
+        if (spawnRates[curentBeat] > 0)
+        {
+            Spawn();
+        }
     }
     void Spawn()
     {

@@ -7,20 +7,19 @@ public class SpawnWalkingBot : MonoBehaviour
     public GameObject intendedDestination;
     public GameObject walkingBotPrefab;
 
-    public float spawnDelay;
+    public int[] spawnRates = new int[92];
+    private int curentBeat = 0;
 
-    void Start()
+    public void Beat()
     {
-        StartCoroutine(timerLoop());
+        curentBeat++;
+        if (spawnRates[curentBeat] > 0)
+        {
+            Spawn();
+        }
     }
 
-    IEnumerator timerLoop()
-    {
-        yield return new WaitForSeconds(Random.Range(6f, 12f));
-        Spawn();
-        StartCoroutine(timerLoop());
-    }
-    void Spawn()
+    public void Spawn()
     {
         GameObject lastSpawned = Instantiate(walkingBotPrefab, transform.position, transform.rotation);
         lastSpawned.GetComponent<WalkingBotActions>().destination = intendedDestination.transform;

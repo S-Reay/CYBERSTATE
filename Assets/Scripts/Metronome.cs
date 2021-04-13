@@ -9,6 +9,9 @@ public class Metronome : MonoBehaviour
     public bool beatFull, beat8;
     public int beatCountFull, beatCount8;
 
+    public SpawnWalkingBot SpawnWalkLeft, SpawnWalkRight;
+    public SpawnFlyingBot SpawnFlyLeft, SpawnFlyRight;
+
     private void Update()
     {
         BeatDetection();
@@ -25,7 +28,10 @@ public class Metronome : MonoBehaviour
             beatTimer -= beatInterval;
             beatFull = true;
             beatCountFull++;
-            Debug.Log("Full");  
+            SpawnWalkLeft.Beat();
+            SpawnWalkRight.Beat();
+            SpawnFlyLeft.Beat();
+            SpawnFlyRight.Beat();
         }
         //Divided beat count
         beat8 = false;
