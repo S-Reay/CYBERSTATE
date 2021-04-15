@@ -7,6 +7,10 @@ TagManager:
   - WalkingBot
   - FlyingBot
   - EnemyTargetPoint
+  - Walk_Spawn_L
+  - Walk_Spawn_R
+  - Fly_Spawn_L
+  - Fly_Spawn_R
   layers:
   - Default
   - TransparentFX
