@@ -5,12 +5,12 @@ public class SpawnRatesEditorWindow : EditorWindow
 {
     private Vector2 scrollPosition = Vector2.zero;
 
-    private SpawnWalkingBot walkSpawnL, walkSpawnR;
-    private SpawnFlyingBot flySpawnL, flySpawnR;
-    private int[] spawnRates_Fly_L = new int[92];
-    private int[] spawnRates_Walk_L = new int[92];
-    private int[] spawnRates_Walk_R = new int[92];
-    private int[] spawnRates_Fly_R = new int[92];
+    public SpawnWalkingBot walkSpawnL, walkSpawnR;
+    public SpawnFlyingBot flySpawnL, flySpawnR;
+    private int[] spawnRates_Fly_L = new int[428];
+    private int[] spawnRates_Walk_L = new int[428];
+    private int[] spawnRates_Walk_R = new int[428];
+    private int[] spawnRates_Fly_R = new int[428];
 
     [MenuItem("CYBERSTATE/Enemy Spawn Rates")]
     public static void ShowWindow()
@@ -32,7 +32,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             EditorGUILayout.BeginVertical();
 
             EditorGUILayout.BeginHorizontal();
-            for (int i = 0; i < 92; i++)
+            for (int i = 0; i < 428; i++)
             {
                 GUILayout.BeginVertical();
                 spawnRates_Fly_L[i] = EditorGUILayout.IntField(spawnRates_Fly_L[i], GUILayout.Width(20));
@@ -43,7 +43,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             EditorGUILayout.Space();
 
             EditorGUILayout.BeginHorizontal();
-            for (int i = 0; i < 92; i++)
+            for (int i = 0; i < 428; i++)
             {
                 GUILayout.BeginVertical();
                 spawnRates_Walk_L[i] = EditorGUILayout.IntField(spawnRates_Walk_L[i], GUILayout.Width(20));
@@ -54,7 +54,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             EditorGUILayout.Space();
 
             EditorGUILayout.BeginHorizontal();
-            for (int i = 0; i < 92; i++)
+            for (int i = 0; i < 428; i++)
             {
                 GUILayout.BeginVertical();
                 spawnRates_Walk_R[i] = EditorGUILayout.IntField(spawnRates_Walk_R[i], GUILayout.Width(20));
@@ -65,17 +65,27 @@ public class SpawnRatesEditorWindow : EditorWindow
             EditorGUILayout.Space();
 
             EditorGUILayout.BeginHorizontal();
-            for (int i = 0; i < 92; i++)
+            for (int i = 0; i < 428; i++)
             {
                 GUILayout.BeginVertical();
                 spawnRates_Fly_R[i] = EditorGUILayout.IntField(spawnRates_Fly_R[i], GUILayout.Width(20));
-                GUILayout.Label((i + 1).ToString());
                 GUILayout.EndVertical();
             }
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Space();
+            EditorGUILayout.BeginHorizontal();
+            for (int i = 0; i < 428; i++)
+            {
+                GUILayout.BeginVertical();
+                EditorGUILayout.IntField(i+1, GUILayout.Width(20));
+                GUILayout.EndVertical();
+            }
 
             EditorGUILayout.EndVertical();
+            if (GUILayout.Button("Apply"))
+            {
+                Apply();
+            }
             GUILayout.EndScrollView();
 
         }
@@ -91,7 +101,7 @@ public class SpawnRatesEditorWindow : EditorWindow
         }
     }
 
-    private void Update()
+    private void Apply()
     {
         walkSpawnL.spawnRates = spawnRates_Walk_L;
         walkSpawnR.spawnRates = spawnRates_Walk_R;
