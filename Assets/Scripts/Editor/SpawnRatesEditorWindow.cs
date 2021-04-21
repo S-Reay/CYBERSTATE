@@ -36,7 +36,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             {
                 GUILayout.BeginVertical();
                 spawnRates_Fly_L[i] = EditorGUILayout.IntField(spawnRates_Fly_L[i], GUILayout.Width(20));
-                GUILayout.Label((i + 1).ToString());
+                //GUILayout.Label((i + 1).ToString());
                 GUILayout.EndVertical();
             }
             EditorGUILayout.EndHorizontal();
@@ -47,7 +47,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             {
                 GUILayout.BeginVertical();
                 spawnRates_Walk_L[i] = EditorGUILayout.IntField(spawnRates_Walk_L[i], GUILayout.Width(20));
-                GUILayout.Label((i + 1).ToString());
+                //GUILayout.Label((i + 1).ToString());
                 GUILayout.EndVertical();
             }
             EditorGUILayout.EndHorizontal();
@@ -58,7 +58,7 @@ public class SpawnRatesEditorWindow : EditorWindow
             {
                 GUILayout.BeginVertical();
                 spawnRates_Walk_R[i] = EditorGUILayout.IntField(spawnRates_Walk_R[i], GUILayout.Width(20));
-                GUILayout.Label((i + 1).ToString());
+                //GUILayout.Label((i + 1).ToString());
                 GUILayout.EndVertical();
             }
             EditorGUILayout.EndHorizontal();
