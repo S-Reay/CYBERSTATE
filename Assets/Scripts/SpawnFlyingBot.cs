@@ -12,7 +12,7 @@ public class SpawnFlyingBot : MonoBehaviour
     public Text debugText;
 
     public int[] spawnRates = new int[428];
-    private int curentBeat = 0;
+    private int currentBeat = 0;
 
     public void UpdateSpawnRates(int[] newRates)
     {
@@ -21,9 +21,9 @@ public class SpawnFlyingBot : MonoBehaviour
 
     public void Beat()
     {
-        curentBeat++;
-        debugText.text = "Flying Beats: " + curentBeat;
-        if (spawnRates[curentBeat] > 0)
+        currentBeat++;
+        debugText.text = currentBeat.ToString();
+        if (spawnRates[currentBeat] > 0)
         {
             Spawn();
         }

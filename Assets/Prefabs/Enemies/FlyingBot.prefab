@@ -64,7 +64,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   exitPoint: {fileID: 0}
   acceptableDistance: 0.1
-  speed: 3
+  speed: 4
   shotPrefab: {fileID: 136330, guid: 006c83f635a1be9439d102bd19a3ab07, type: 3}
   firePoint: {fileID: 2512027393488404852}
   hasFired: 0

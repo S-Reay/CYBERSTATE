@@ -49,7 +49,7 @@ MonoBehaviour:
   animator: {fileID: 8977976512588351186}
   destination: {fileID: 0}
   acceptableDistance: 0.1
-  walkSpeed: 1.9
+  walkSpeed: 4
   hasAttacked: 0
   isDead: 0
   explosionPrefab: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 3}
