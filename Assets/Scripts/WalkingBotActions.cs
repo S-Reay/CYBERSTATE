@@ -34,7 +34,7 @@ public class WalkingBotActions : MonoBehaviour
     }
     IEnumerator CountdownToAttack()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.5f);
         Attack();
     }
     void Attack()

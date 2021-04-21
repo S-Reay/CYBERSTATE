@@ -52,7 +52,7 @@ public class FlyingBotActions : MonoBehaviour
     }
     IEnumerator CountdownToAttack()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(.25f);
         Attack();
     }
     void Attack()
@@ -63,7 +63,7 @@ public class FlyingBotActions : MonoBehaviour
     }
     IEnumerator CountdownToExit()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.25f);
         isExiting = true;
         gameObject.GetComponent<LookAtPlayer>().enabled = false;
     }
