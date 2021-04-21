@@ -11,6 +11,11 @@ public class SpawnFlyingBot : MonoBehaviour
     public int[] spawnRates = new int[92];
     private int curentBeat = 0;
 
+    public void UpdateSpawnRates(int[] newRates)
+    {
+        spawnRates = newRates;
+    }
+
     public void Beat()
     {
         curentBeat++;
