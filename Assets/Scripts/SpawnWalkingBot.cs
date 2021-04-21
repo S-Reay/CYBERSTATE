@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnWalkingBot : MonoBehaviour
 {
     public GameObject intendedDestination;
     public GameObject walkingBotPrefab;
 
-    public int[] spawnRates = new int[92];
+    public Text debugText;
+
+    public int[] spawnRates = new int[428];
     private int curentBeat = 0;
     public void UpdateSpawnRates(int[] newRates)
     {
@@ -17,6 +20,7 @@ public class SpawnWalkingBot : MonoBehaviour
     public void Beat()
     {
         curentBeat++;
+        debugText.text = "Walking Beats: " + curentBeat;
         if (spawnRates[curentBeat] > 0)
         {
             Spawn();

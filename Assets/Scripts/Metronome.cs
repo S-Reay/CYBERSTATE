@@ -19,6 +19,10 @@ public class Metronome : MonoBehaviour
 
     void BeatDetection()
     {
+        if (beatCountFull == 427)
+        {
+            return;
+        }
         //Full beat count
         beatFull = false;
         beatInterval = 60 / bpm;
@@ -32,6 +36,10 @@ public class Metronome : MonoBehaviour
             SpawnWalkRight.Beat();
             SpawnFlyLeft.Beat();
             SpawnFlyRight.Beat();
+            if (beatCountFull == 102)   //Update BPM on song transition
+            {
+                bpm = 112;
+            }
         }
         //Divided beat count
         beat8 = false;
@@ -42,7 +50,7 @@ public class Metronome : MonoBehaviour
             beatTimer8 -= beatInterval8;
             beat8 = true;
             beatCount8++;
-            Debug.Log("D8");
+            //Debug.Log("D8");
         }
     }
 }
