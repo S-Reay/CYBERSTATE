@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dda50a45097dd2849aa131ce318edbe0
+guid: ed67ea3851b5c1e48b0088c796d17ee8
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -7,33 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Building1Glow
-    second: {fileID: 2100000, guid: 8cd61c656a2ce0e4887594b40d6559da, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Building2Glow
-    second: {fileID: 2100000, guid: 9a8f639da91a35b4fa95b92edc7e42ec, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Building3Glow
-    second: {fileID: 2100000, guid: 47b3a71ce6d7eac4fb2b867aa1c215a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Building4Glow
-    second: {fileID: 2100000, guid: 9e489196499d8144284accd68b3504dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingHIGHP
-    second: {fileID: 2100000, guid: 6ae09cb4cb12b2a4ca5be44232b6ede4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingLOWP
-    second: {fileID: 2100000, guid: 1ed8e2085d32629469087b8225298cbc, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: bc74ace4bcd9e8d4093335422c673f1a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -64,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.15
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -73,7 +48,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -110,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.0015
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

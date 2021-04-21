@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dda50a45097dd2849aa131ce318edbe0
+guid: 232cfcdf46e34204cb1a525560d62297
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -7,33 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Building1Glow
-    second: {fileID: 2100000, guid: 8cd61c656a2ce0e4887594b40d6559da, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 12329958f6c64ff4384fcaca7f41852b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Building2Glow
-    second: {fileID: 2100000, guid: 9a8f639da91a35b4fa95b92edc7e42ec, type: 2}
+      name: Material.002
+    second: {fileID: 2100000, guid: 1b1a7ff5fb532ac4eb833cb8eca56e4a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Building3Glow
-    second: {fileID: 2100000, guid: 47b3a71ce6d7eac4fb2b867aa1c215a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Building4Glow
-    second: {fileID: 2100000, guid: 9e489196499d8144284accd68b3504dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingHIGHP
-    second: {fileID: 2100000, guid: 6ae09cb4cb12b2a4ca5be44232b6ede4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingLOWP
-    second: {fileID: 2100000, guid: 1ed8e2085d32629469087b8225298cbc, type: 2}
+      name: Material.004
+    second: {fileID: 2100000, guid: b9766ae618d0fe544a66c3db74bc5b1f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +58,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
