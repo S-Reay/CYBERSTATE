@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5078257777713173069}
   m_LocalRotation: {x: 0.50000006, y: 0.5, z: 0.50000006, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20175, y: 0.20175, z: 0.20175}
+  m_LocalScale: {x: 0.20175011, y: 0.20175011, z: 0.20175011}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5078257777713173069}
   serializedVersion: 6
-  lengthInSec: 30
+  lengthInSec: 300
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
@@ -51,7 +51,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -917,7 +917,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 2
@@ -961,7 +961,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 0.7678528
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -969,8 +969,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.4983868
-          value: 0.5007089
+          time: 0.4962811
+          value: 0.8102334
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -979,7 +979,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 0
+          value: 0.73809814
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1241,7 +1241,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -3500,7 +3500,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -4675,7 +4675,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 4
   m_SortMode: 1
   m_MinParticleSize: 0
   m_MaxParticleSize: 1
@@ -4693,7 +4693,7 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_VertexStreams: 0001030405
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
