@@ -16,6 +16,10 @@ public class PlayerLaserShotBehaviour : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        else if (other.gameObject.transform.tag == "BossBot")
+        {
+            other.gameObject.GetComponent<BossBotActions>().Damage();
+        }
         Destroy(gameObject);
     }
 }

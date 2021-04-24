@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 168623601464165680}
   - component: {fileID: 176357059764581517}
-  - component: {fileID: 461900787}
-  - component: {fileID: 5207812773711466974}
   - component: {fileID: 4721831610717701199}
+  - component: {fileID: 436827390}
   m_Layer: 0
-  m_Name: FlyingBot
+  m_Name: BossBot
   m_TagString: FlyingBot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,40 +46,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.8, z: 1.1239287}
+  m_Size: {x: 2, y: 0.8, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &461900787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168623601464072464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5f143c74c7b1b4385801a48dd4e2de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 0}
-  exitPoint: {fileID: 0}
-  acceptableDistance: 0.1
-  speed: 4
-  shotPrefab: {fileID: 136330, guid: 006c83f635a1be9439d102bd19a3ab07, type: 3}
-  firePoint: {fileID: 2512027393488404852}
-  hasFired: 0
-  isExiting: 0
---- !u!114 &5207812773711466974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168623601464072464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a619b785442e8e429e1b379c4ad15d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4721831610717701199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,6 +64,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &436827390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168623601464072464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8a4bf99a8c722419e8f5e37ac9788d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
+  speed: 2
+  destination: {fileID: 0}
 --- !u!95 &2014993708117131221
 Animator:
   serializedVersion: 3
@@ -216,17 +198,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9ffb08c01af2a9747a58c97c7e50ecd1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ffb08c01af2a9747a58c97c7e50ecd1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ffb08c01af2a9747a58c97c7e50ecd1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffb08c01af2a9747a58c97c7e50ecd1, type: 3}

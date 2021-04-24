@@ -11,6 +11,7 @@ public class Metronome : MonoBehaviour
 
     public SpawnWalkingBot SpawnWalkLeft, SpawnWalkRight;
     public SpawnFlyingBot SpawnFlyLeft, SpawnFlyRight;
+    public GameObject bossBot;
 
     private void Update()
     {
@@ -39,6 +40,10 @@ public class Metronome : MonoBehaviour
             if (beatCountFull == 102)   //Update BPM on song transition
             {
                 bpm = 112;
+            }
+            if (beatCountFull == 50)
+            {
+                bossBot.SetActive(true);
             }
         }
         //Divided beat count
