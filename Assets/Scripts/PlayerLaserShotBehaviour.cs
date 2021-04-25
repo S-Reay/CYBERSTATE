@@ -14,7 +14,7 @@ public class PlayerLaserShotBehaviour : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "FlyingBot")
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<FlyingBotActions>().Die();
         }
         else if (other.gameObject.transform.tag == "BossBot")
         {

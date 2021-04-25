@@ -11,6 +11,8 @@ public class FlyingBotActions : MonoBehaviour
 
     public GameObject shotPrefab;
     public GameObject firePoint;
+    public GameObject explosionPrefab;
+    public GameObject modelPrefab;
     private GameObject targerPoint;
     private GameObject player;
 
@@ -66,5 +68,11 @@ public class FlyingBotActions : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         isExiting = true;
         gameObject.GetComponent<LookAtPlayer>().enabled = false;
+    }
+    public void Die()
+    {
+        explosionPrefab.SetActive(true);
+        modelPrefab.SetActive(false);
+        Destroy(gameObject, 2f);
     }
 }
