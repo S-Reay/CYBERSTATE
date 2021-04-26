@@ -7,6 +7,7 @@ public class SpawnWalkingBot : MonoBehaviour
 {
     public GameObject intendedDestination;
     public GameObject walkingBotPrefab;
+    public ScoreTracker scoreTracker;
 
 
     public int[] spawnRates = new int[428];
@@ -19,7 +20,7 @@ public class SpawnWalkingBot : MonoBehaviour
     public void Beat()
     {
         currentBeat++;
-        if (spawnRates[currentBeat] > 0)
+        if (spawnRates[currentBeat] > 0 && spawnRates[currentBeat] <= scoreTracker.score)
         {
             Spawn();
         }

@@ -66,10 +66,12 @@ MonoBehaviour:
   exitPoint: {fileID: 0}
   acceptableDistance: 0.1
   speed: 4
-  shotPrefab: {fileID: 136330, guid: 006c83f635a1be9439d102bd19a3ab07, type: 3}
+  shotPrefab: {fileID: 5510612535325756966, guid: e4c01520bbab7974fbf3642bdec6c806,
+    type: 3}
   firePoint: {fileID: 2512027393488404852}
   explosionPrefab: {fileID: 5001542815356313292}
   modelPrefab: {fileID: 1054972250053810669}
+  scoreTracker: {fileID: 0}
   hasFired: 0
   isExiting: 0
 --- !u!114 &5207812773711466974

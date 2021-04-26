@@ -11,6 +11,12 @@ public class WalkingBotActions : MonoBehaviour
     public bool hasAttacked = false;
     public bool isDead = false;
     public GameObject explosionPrefab;
+    public ScoreTracker scoreTracker;
+
+    private void Start()
+    {
+        scoreTracker = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreTracker>();
+    }
 
     private void Update()
     {
@@ -43,8 +49,9 @@ public class WalkingBotActions : MonoBehaviour
         {
             GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(explosion, 3f);
-            Destroy(gameObject);
         }
+        scoreTracker.score--;
+        Destroy(gameObject);
     }
     public void Die()
     {

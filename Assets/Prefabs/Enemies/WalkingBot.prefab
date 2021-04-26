@@ -54,6 +54,7 @@ MonoBehaviour:
   isDead: 0
   explosionPrefab: {fileID: 1396317007984937954, guid: 369462f5c9cfcaa4ebf8885a224817d4,
     type: 3}
+  scoreTracker: {fileID: 0}
 --- !u!65 &2526998771109226743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3

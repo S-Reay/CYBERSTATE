@@ -13,6 +13,7 @@ public class FlyingBotActions : MonoBehaviour
     public GameObject firePoint;
     public GameObject explosionPrefab;
     public GameObject modelPrefab;
+    public ScoreTracker scoreTracker;
     private GameObject targerPoint;
     private GameObject player;
 
@@ -23,6 +24,7 @@ public class FlyingBotActions : MonoBehaviour
     {
         targerPoint = GameObject.FindGameObjectWithTag("EnemyTargetPoint");
         player = GameObject.FindGameObjectWithTag("Player");
+        scoreTracker = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreTracker>();
     }
 
     void Update()
@@ -60,8 +62,8 @@ public class FlyingBotActions : MonoBehaviour
     void Attack()
     {
         GameObject laser = Instantiate(shotPrefab, firePoint.transform.position, firePoint.transform.rotation);
-        laser.GetComponent<ShotBehavior>().setTarget(targerPoint.transform.position, player);
         StartCoroutine(CountdownToExit());
+
     }
     IEnumerator CountdownToExit()
     {

@@ -11,6 +11,8 @@ TagManager:
   - Walk_Spawn_R
   - Fly_Spawn_L
   - Fly_Spawn_R
+  - BossBot
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

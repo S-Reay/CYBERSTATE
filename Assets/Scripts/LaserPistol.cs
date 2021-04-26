@@ -11,6 +11,12 @@ public class LaserPistol : MonoBehaviour
 
     public GameObject shotPrefab;
     public GameObject firePoint;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -29,6 +35,7 @@ public class LaserPistol : MonoBehaviour
     void shootRay()
     {
         GameObject laser = Instantiate(shotPrefab, firePoint.transform.position, firePoint.transform.rotation);     //Spawn laser shot
+        audioSource.Play();
         Destroy(laser, 8f);                                                                                         //Destory laser shot after 8 seconds
     }
 }
