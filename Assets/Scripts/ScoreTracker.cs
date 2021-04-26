@@ -16,9 +16,9 @@ public class ScoreTracker : MonoBehaviour
         {
             score = 1;
         }
-        else if (score > 10)
+        else if (score > 13)
         {
-            score = 10;
+            score = 13;
         }
     }
 }
