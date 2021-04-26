@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLaserShotBehaviour : MonoBehaviour
+public class EnemyLaserShotBehaviour : MonoBehaviour
 {
     public float velocity;
 
@@ -12,14 +12,10 @@ public class PlayerLaserShotBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.transform.tag == "FlyingBot")
+        if (other.gameObject.transform.tag == "Player")
         {
             other.gameObject.GetComponent<FlyingBotActions>().Die();
-            GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreTracker>().score++;
-        }
-        else if (other.gameObject.transform.tag == "BossBot")
-        {
-            other.gameObject.GetComponent<BossBotActions>().Damage();
+            GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreTracker>().score--;
         }
         Destroy(gameObject);
     }
