@@ -41,7 +41,7 @@ public class Metronome : MonoBehaviour
             {
                 bpm = 112;
             }
-            if (beatCountFull == 50)    //TODO remove
+            if (beatCountFull == 400)    //TODO remove
             {
                 bossBot.SetActive(true);
             }
