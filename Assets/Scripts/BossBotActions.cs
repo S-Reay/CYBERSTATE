@@ -9,12 +9,6 @@ public class BossBotActions : MonoBehaviour
     public GameObject destination;
     public GameObject explosionPrefab;
     public GameObject logo;
-    private AudioSource audioSource;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
@@ -43,7 +37,6 @@ public class BossBotActions : MonoBehaviour
     void Die()
     {
         Instantiate(explosionPrefab, transform.position, transform.rotation);
-        audioSource.Play();
         logo.SetActive(true);
         Destroy(gameObject);
     }

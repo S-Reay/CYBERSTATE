@@ -2,8 +2,9 @@
 
 public class SelfRemove : MonoBehaviour
 {
+    public float timer;
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, timer);
     }
 }
