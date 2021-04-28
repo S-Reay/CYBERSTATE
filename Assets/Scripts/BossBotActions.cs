@@ -7,6 +7,8 @@ public class BossBotActions : MonoBehaviour
     public int hp;
     public float speed;
     public GameObject destination;
+    public GameObject explosionPrefab;
+    public GameObject logo;
 
     void Update()
     {
@@ -15,6 +17,10 @@ public class BossBotActions : MonoBehaviour
         {
             Move();
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Die();
+        }
     }
     void Move()
     {
@@ -22,7 +28,6 @@ public class BossBotActions : MonoBehaviour
     }
     public void Damage()
     {
-        //Flash red
         hp--;
         if (hp <= 0)
         {
@@ -31,9 +36,8 @@ public class BossBotActions : MonoBehaviour
     }
     void Die()
     {
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
+        logo.SetActive(true);
         Destroy(gameObject);
-        //Expolode
-        //Large smoke effect
-        //Call game ending
     }
 }

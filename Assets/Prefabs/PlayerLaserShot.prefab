@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 205012618406578468}
   - component: {fileID: 8463223630388895371}
   - component: {fileID: 9065544688228659679}
+  - component: {fileID: 7466086109419556333}
   m_Layer: 0
   m_Name: PlayerLaserShot
   m_TagString: Untagged
@@ -124,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 45
+  sparkParticle: {fileID: 1396317007984937954, guid: a13ea9a597d22d0499603716e8552a04,
+    type: 3}
 --- !u!136 &9065544688228659679
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -138,6 +141,19 @@ CapsuleCollider:
   m_Height: 0.2614721
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.0762797}
+--- !u!114 &7466086109419556333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510612535325756966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd752786cc3737468db4e639a9c96a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
 --- !u!1001 &6790820361637448121
 PrefabInstance:
   m_ObjectHideFlags: 0

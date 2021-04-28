@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLaserShotBehaviour : MonoBehaviour
 {
     public float velocity;
+    public GameObject sparkParticle;
 
     private void Update()
     {
@@ -20,6 +21,7 @@ public class PlayerLaserShotBehaviour : MonoBehaviour
         else if (other.gameObject.transform.tag == "BossBot")
         {
             other.gameObject.GetComponent<BossBotActions>().Damage();
+            Instantiate(sparkParticle, transform.transform.transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }

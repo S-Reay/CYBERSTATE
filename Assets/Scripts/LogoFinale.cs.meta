@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 130f75f2ea124f34bb66b4c9c83b9a7b
+guid: c9a70b65427baaa449d7defa1f0c12c3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - sparkParticle: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

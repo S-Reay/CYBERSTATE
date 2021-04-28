@@ -11,6 +11,7 @@ public class WalkingBotActions : MonoBehaviour
     public bool hasAttacked = false;
     public bool isDead = false;
     public GameObject explosionPrefab;
+    public GameObject brokenBotPrefab;
     public ScoreTracker scoreTracker;
 
     private void Start()
@@ -56,6 +57,7 @@ public class WalkingBotActions : MonoBehaviour
     public void Die()
     {
         StopAllCoroutines();
-        Destroy(gameObject, 3f);
+        Instantiate(brokenBotPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

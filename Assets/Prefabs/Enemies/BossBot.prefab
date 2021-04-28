@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 436827390}
   - component: {fileID: 2545685359721675033}
   - component: {fileID: 639272822247980621}
+  - component: {fileID: 6986893947255603471}
   m_Layer: 0
   m_Name: BossBot
-  m_TagString: FlyingBot
+  m_TagString: BossBot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 168623601464072464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8052682, y: 0.597, z: 6.79538}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.5, y: 5.5, z: 5.5}
   m_Children:
   - {fileID: 6155023861222188461}
   - {fileID: 712028924697577928}
@@ -81,6 +82,9 @@ MonoBehaviour:
   hp: 20
   speed: 2
   destination: {fileID: 0}
+  explosionPrefab: {fileID: 100010, guid: 3845a4d4dc8df834db5af9faf46d3901, type: 3}
+  logo: {fileID: 0}
+  audioSource: {fileID: 6986893947255603471}
 --- !u!65 &2545685359721675033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107,6 +111,103 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39911437, y: 0.21137226, z: 0.5573821}
   m_Center: {x: -0.7715372, y: -0.25088674, z: 0.06}
+--- !u!82 &6986893947255603471
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168623601464072464}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5164941156372863464, guid: 5c62c3a6110edf044b61fee7e49f7e03,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: c44bfd31bb16fe34d9bdb614ac3f15cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2512027393488404852
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,11 +269,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossBot
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -227,21 +323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366b8eeebfebe3a4fbf6f977c00aa5a1, type: 3}
