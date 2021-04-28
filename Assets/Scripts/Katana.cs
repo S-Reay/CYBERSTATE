@@ -9,7 +9,7 @@ public class Katana : MonoBehaviour
     {
         if (collision.gameObject.tag == "WalkingBot")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<WalkingBotActions>().Die();
             ScoreTracker.score++;
         }
     }

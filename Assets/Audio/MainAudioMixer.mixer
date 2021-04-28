@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-5799835716674135155
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 4d2d5c5ddbca6544794b9a6987f1c305
+  m_EffectName: Attenuation
+  m_MixLevel: 23afb68d0a94c8b4ba866c81d480d95d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-4366910759270098522
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 100846ebac3e9c843a5303ce75e7272b
+  m_EffectName: Attenuation
+  m_MixLevel: 830e8daea42e1af4599adccc2b11a897
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-4283001693781993942
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lasers
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: a867841be67ecf143b2b93d88fc988b9
+  m_Children: []
+  m_Volume: 2aead7373895f5f4e9d3869dd5e27319
+  m_Pitch: 1b641516b5cc8134ba4a9e2b519412b2
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5799835716674135155}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -16,7 +63,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters: []
-  m_AudioMixerGroupViews: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - c4e9dd165e82b034aae4cee9ae6c8764
+    - a867841be67ecf143b2b93d88fc988b9
+    - 8b27757500aa66043a5a0b9fc07afbcf
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
@@ -28,7 +80,9 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c4e9dd165e82b034aae4cee9ae6c8764
-  m_Children: []
+  m_Children:
+  - {fileID: -4283001693781993942}
+  - {fileID: 5164941156372863464}
   m_Volume: 22cf492681a7cdc41a9f856c4d7fa401
   m_Pitch: 90746e16aa82b0e40a90da48556651f1
   m_Send: 00000000000000000000000000000000
@@ -61,5 +115,25 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 0e3127d9da1f8d246bf0ecc7e1cce8ab
-  m_FloatValues: {}
+  m_FloatValues:
+    2aead7373895f5f4e9d3869dd5e27319: -20
   m_TransitionOverrides: {}
+--- !u!243 &5164941156372863464
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Explosions
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 8b27757500aa66043a5a0b9fc07afbcf
+  m_Children: []
+  m_Volume: 322376f4ea202374b9378386ae037e88
+  m_Pitch: 107308b3a8ce38541af1773a68c3135b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -4366910759270098522}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0

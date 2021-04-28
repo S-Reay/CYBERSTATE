@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 45
+  sparkParticle: {fileID: 1396317007984937954, guid: a13ea9a597d22d0499603716e8552a04,
+    type: 3}
 --- !u!136 &9065544688228659679
 CapsuleCollider:
   m_ObjectHideFlags: 0
