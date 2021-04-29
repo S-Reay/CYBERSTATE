@@ -10,8 +10,6 @@ public class SpawnFlyingBot : MonoBehaviour
     public GameObject flyingBotPrefab;
     public ScoreTracker scoreTracker;
 
-    public Text debugText;
-
     public int[] spawnRates = new int[428];
     private int currentBeat = 0;
 
@@ -23,7 +21,6 @@ public class SpawnFlyingBot : MonoBehaviour
     public void Beat()
     {
         currentBeat++;
-        debugText.text = currentBeat.ToString();
         if (spawnRates[currentBeat] > 0 && spawnRates[currentBeat] <= scoreTracker.score)
         {
             Spawn();
